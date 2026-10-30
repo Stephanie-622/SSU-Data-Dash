@@ -72,21 +72,45 @@ class NearestSalesBaseline:
         return float(np.median(earlier["sold_price"].to_numpy()[nearest]))
 
 
-class FeatureModel:
-    """A machine-learning model (gradient-boosted trees) on the features in features.py.
 
-    It learns log(price) rather than price, so a 10% miss on a cheap condo counts
-    as much as a 10% miss on an expensive house. Not used until you switch it on
-    in make_model().
-    """
+class FeatureModel:
+    """Gradient boosting with explicitly marked categorical features."""
 
     def __init__(self, make_features):
+        from sklearn.compose import ColumnTransformer
+        from sklearn.preprocessing import OrdinalEncoder
+        from sklearn.pipeline import Pipeline
+
         self.make_features = make_features
-        self.model = HistGradientBoostingRegressor(random_state=0)
+        categorical = ["community", "municipality", "house_style"]
+
+        preprocessing = ColumnTransformer(
+            [
+                (
+                    "categories",
+                    OrdinalEncoder(
+                        handle_unknown="use_encoded_value",
+                        unknown_value=-1,
+                    ),
+                    categorical,
+                )
+            ],
+            remainder="passthrough",
+        )
+
+        self.model = Pipeline([
+            ("preprocessing", preprocessing),
+            ("regressor", HistGradientBoostingRegressor(
+                categorical_features=[0, 1, 2],
+                random_state=0,
+            )),
+        ])
 
     def fit(self, train):
-        self.model.fit(self.make_features(train), np.log(train["sold_price"]))
+        X = self.make_features(train)
+        self.model.fit(X, np.log(train["sold_price"]))
         return self
 
     def predict(self, homes):
-        return np.exp(self.model.predict(self.make_features(homes)))
+        X = self.make_features(homes)
+        return np.exp(self.model.predict(X))
