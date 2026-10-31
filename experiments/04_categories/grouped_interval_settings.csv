@@ -1,0 +1,13 @@
+track,house_type_name,calibration_n,source,lower_multiplier,upper_multiplier
+off_market,Co-Op Apt,20,pooled,0.8109807282318934,1.2330749242096146
+off_market,Condo Apt,1933,property_type,0.8196983164983165,1.2199610269689432
+off_market,Condo Townhouse,242,property_type,0.8486891233766234,1.1782877527891085
+off_market,Detached,1057,property_type,0.7918648651321438,1.2628417347865577
+off_market,Freehold Townhouse,138,property_type,0.8050033682994899,1.2422308270739613
+off_market,Semi-Detached,348,property_type,0.8112140127320824,1.2327203232499726
+list_aware,Co-Op Apt,20,pooled,0.9197091058920478,1.0873003144076476
+list_aware,Condo Apt,1933,property_type,0.9350580060988043,1.069452369240859
+list_aware,Condo Townhouse,242,property_type,0.9152497321981845,1.0925979706088174
+list_aware,Detached,1057,property_type,0.904833618897635,1.105175558373159
+list_aware,Freehold Townhouse,138,property_type,0.8932914046121593,1.1194555268716264
+list_aware,Semi-Detached,348,property_type,0.8922196460475829,1.1208002473716758

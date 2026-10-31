@@ -1,0 +1,25 @@
+track,house_type_name,method,n,coverage_pct,mean_width_pct
+list_aware,Co-Op Apt,by_property_type,28,75.0,16.75912085155998
+list_aware,Co-Op Apt,pooled,28,75.0,16.75912085155998
+list_aware,Condo Apt,by_property_type,2910,78.96907216494846,13.439436314205478
+list_aware,Condo Apt,pooled,2910,88.59106529209622,16.759120851559985
+list_aware,Condo Townhouse,by_property_type,374,80.4812834224599,17.734823841063285
+list_aware,Condo Townhouse,pooled,374,77.54010695187165,16.75912085155998
+list_aware,Detached,by_property_type,2066,75.89545014520813,20.034193947552403
+list_aware,Detached,pooled,2066,67.66698935140369,16.759120851559985
+list_aware,Freehold Townhouse,by_property_type,267,82.39700374531836,22.616412225946714
+list_aware,Freehold Townhouse,pooled,267,67.79026217228464,16.75912085155998
+list_aware,Semi-Detached,by_property_type,686,81.04956268221575,22.858060132409296
+list_aware,Semi-Detached,pooled,686,67.3469387755102,16.75912085155998
+off_market,Co-Op Apt,by_property_type,28,71.42857142857143,42.209419597772126
+off_market,Co-Op Apt,pooled,28,71.42857142857143,42.209419597772126
+off_market,Condo Apt,by_property_type,2910,80.893470790378,40.026271047062664
+off_market,Condo Apt,pooled,2910,82.61168384879724,42.209419597772126
+off_market,Condo Townhouse,by_property_type,374,75.93582887700535,32.95986294124851
+off_market,Condo Townhouse,pooled,374,87.16577540106952,42.209419597772126
+off_market,Detached,by_property_type,2066,79.57405614714425,47.09768696544139
+off_market,Detached,pooled,2066,74.68538238141336,42.209419597772126
+off_market,Freehold Townhouse,by_property_type,267,82.77153558052434,43.72274587744713
+off_market,Freehold Townhouse,pooled,267,81.64794007490637,42.209419597772126
+off_market,Semi-Detached,by_property_type,686,78.2798833819242,42.15063105178902
+off_market,Semi-Detached,pooled,686,78.4256559766764,42.209419597772126
